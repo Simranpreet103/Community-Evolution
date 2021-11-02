@@ -2,7 +2,9 @@ import re
 import csv
 import pandas as pd
 from igraph import *
-import leidenalg as la
+import leidenalg as la # for leiden algorithm
+#import infomap as la    for infomap
+#import louvain as la    for louvain
 import xlsxwriter
 import networkx as nx
 import itertools
@@ -66,7 +68,8 @@ for k in range(6): #change in time (1 num more)
       total = len(set(newdf.index))
       print('Time'+str(k)+':')
       f1.write('Time'+str(k)+':')
-      partition = la.find_partition(G, la.ModularityVertexPartition)
+      partition = la.find_partition(G, la.ModularityVertexPartition) # for leiden and louvain
+      # partition = G.community_infomap()      for infomap
       modularity_dict = {}
       for i,c in enumerate(partition):
         for name in c:
