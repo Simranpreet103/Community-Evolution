@@ -1,0 +1,3 @@
+The code given is for detecting communities in temporal networks using algorithms like Louvain, Leiden and Infomap. 
+Some metrics, like Jaccard, JNR, LNR, Density, Relative Edges are also used in analyzing the change within the network along time and difference between these algorithms and the 
+According to the code, the dataset should be in excel with the first row as "SRC, TGT, TIME"
